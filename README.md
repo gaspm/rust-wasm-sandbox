@@ -42,7 +42,7 @@ pub fn add(a: usize, b: usize) -> usize {
 ```
 
 ### Build wasm-pack
-`wasm-pack build`
+`wasm-pack build --release --target web`
 
 ### npm package initialization
 
@@ -56,6 +56,33 @@ pub fn add(a: usize, b: usize) -> usize {
 "scripts": {
   "start": "http-server -a localhost -p 4200"
 }
+```
+
+### Create index.js
+```
+import init from "./pkg/wasm_poc_sandbox.js";
+import {add} from '../pkg/wasm_poc_sandbox.js';
+
+function run() {
+    console.log(add(5, 5));
+}
+
+init().then(run)
+```
+
+### Create index.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Wasm Sandbox</title>
+    <script type="module" src="./index.js"></script>
+</head>
+<body>
+    Look result into the console.
+</body>
+</html>
 ```
 
 ---
