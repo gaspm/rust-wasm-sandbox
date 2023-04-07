@@ -1,10 +1,7 @@
 # Rust and WebAssembly Sandbox
+
 ### Demonstration of using WebAssembly.
 
-I worked with Windows 11 WSL (Ubuntu 20.04), on macOS it should be 
-easier to install. For more detailed information about installing 
-Rust and Cargo, see the official pages.
----
 ### Install Rust and Cargo
 - **Rust:** multi-paradigm, high-level, general-purpose programming language (https://www.rust-lang.org/)
 - **Cargo:** the Rust build tool and package manager (https://crates.io/)
@@ -91,7 +88,7 @@ init().then(run)
 ---
 ### Troubleshooting
 
-#### Fix Rust Error “linker ‘cc’ not found” on Linux
+#### Fix Error `linker ‘cc’ not found` on Linux
 `sudo apt-get update`
 
 `sudo apt install gcc cmake`
