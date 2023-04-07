@@ -12,7 +12,7 @@ https://doc.rust-lang.org/cargo/getting-started/installation.html
 ---
 
 ### Init Cargo.toml file
-`cargo init --name wasm_poc_sandbox --lib`
+`cargo init --name rust_wasm_starter --lib`
 
 ### Add Wasm BindGen Dependency
 
@@ -49,7 +49,7 @@ pub fn add(a: usize, b: usize) -> usize {
 ### Install http-server
 `npm i http-server --save`
 
-### Edit package.json add start script
+### Edit package.json and add the start script
 ```json
 {
   "scripts": {
@@ -76,7 +76,7 @@ init().then(run)
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Wasm Sandbox</title>
+    <title>Rust Wasm Starter</title>
     <script type="module" src="./index.js"></script>
 </head>
 <body>
@@ -84,6 +84,9 @@ init().then(run)
 </body>
 </html>
 ```
+
+### Run Server with APP
+`npm run start`
 
 ---
 ### Troubleshooting

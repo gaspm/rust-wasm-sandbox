@@ -1,5 +1,5 @@
 [package]
-name = "wasm_poc_sandbox"
+name = "rust_wasm_starter"
 version = "0.1.0"
 edition = "2021"
 
