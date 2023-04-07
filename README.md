@@ -1,4 +1,4 @@
-# Rust and WebAssembly Sandbox
+# Rust and WebAssembly Starter
 
 ### Demonstration of using WebAssembly.
 
@@ -60,8 +60,8 @@ pub fn add(a: usize, b: usize) -> usize {
 
 ### Create index.js
 ```javascript
-import init from "./pkg/wasm_poc_sandbox.js";
-import {add} from "../pkg/wasm_poc_sandbox.js";
+import init from "./pkg/rust_wasm_starter.js";
+import {add} from "../pkg/rust_wasm_starter.js";
 
 function run() {
     console.log(add(5, 5));
