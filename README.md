@@ -1,19 +1,16 @@
 # Rust and WebAssembly Sandbox
 ### Demonstration of using WebAssembly.
 
-***I worked with Windows 11 WSL (Ubuntu 20.04), on macOS it should be 
+I worked with Windows 11 WSL (Ubuntu 20.04), on macOS it should be 
 easier to install. For more detailed information about installing 
-Rust and Cargo, see the official pages.***
-
+Rust and Cargo, see the official pages.
+---
 ### Install Rust and Cargo
-- Rust is a multi-paradigm, high-level, general-purpose programming language. (https://www.rust-lang.org/)
-- Cargo: the Rust build tool and package manager
+- **Rust:** multi-paradigm, high-level, general-purpose programming language (https://www.rust-lang.org/)
+- **Cargo:** the Rust build tool and package manager (https://crates.io/)
 
 ### Installation
 https://doc.rust-lang.org/cargo/getting-started/installation.html
-
-#### Windows Subsystem for Linux
-`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
 ---
 
@@ -30,13 +27,13 @@ Facilitating high-level interactions between Wasm modules and JavaScript.
 `cargo install wasm-pack`
 
 ### Add the following to your Cargo.toml file:
-```
+```toml
 [lib]
 crate-type = ["cdylib", "rlib"]
 ```
 
 ### src/lib.rs
-```
+```rust
 use wasm_bindgen::prelude::wasm_bindgen;
 
 #[wasm_bindgen]
@@ -56,14 +53,16 @@ pub fn add(a: usize, b: usize) -> usize {
 `npm i http-server --save`
 
 ### Edit package.json add start script
-```
-"scripts": {
-  "start": "http-server -a localhost -p 5200"
+```json
+{
+  "scripts": {
+    "start": "http-server -a localhost -p 5200"
+  }
 }
 ```
 
 ### Create index.js
-```
+```javascript
 import init from "./pkg/wasm_poc_sandbox.js";
 import {add} from "../pkg/wasm_poc_sandbox.js";
 
@@ -75,16 +74,16 @@ init().then(run)
 ```
 
 ### Create index.html
-```
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Wasm Sandbox</title>
     <script type="module" src="./index.js"></script>
 </head>
 <body>
-    Look result into the console.
+    See the result in the console.
 </body>
 </html>
 ```
@@ -97,6 +96,6 @@ init().then(run)
 
 `sudo apt install gcc cmake`
 
-#### WSL INTERNET Connection
+#### WSL Net Connection
 `sudo nano /etc/resolv.conf`
-with the change of the nameserver to **8.8.8.8** or **1.1.1.1**
+with the change of the nameserver to `8.8.8.8` or `1.1.1.1`
