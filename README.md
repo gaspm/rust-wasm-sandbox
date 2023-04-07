@@ -65,7 +65,7 @@ pub fn add(a: usize, b: usize) -> usize {
 ### Create index.js
 ```
 import init from "./pkg/wasm_poc_sandbox.js";
-import {add} from '../pkg/wasm_poc_sandbox.js';
+import {add} from "../pkg/wasm_poc_sandbox.js";
 
 function run() {
     console.log(add(5, 5));
