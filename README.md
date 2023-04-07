@@ -1,5 +1,9 @@
-# Rust and WebAssembly PoC Sandbox
-Demonstration of using WebAssembly.
+# Rust and WebAssembly Sandbox
+### Demonstration of using WebAssembly.
+
+***I worked with Windows 11 WSL (Ubuntu 20.04), on macOS it should be 
+easier to install. For more detailed information about installing 
+Rust and Cargo, see the official pages.***
 
 ### Install Rust and Cargo
 - Rust is a multi-paradigm, high-level, general-purpose programming language. (https://www.rust-lang.org/)
@@ -54,7 +58,7 @@ pub fn add(a: usize, b: usize) -> usize {
 ### Edit package.json add start script
 ```
 "scripts": {
-  "start": "http-server -a localhost -p 4200"
+  "start": "http-server -a localhost -p 5200"
 }
 ```
 

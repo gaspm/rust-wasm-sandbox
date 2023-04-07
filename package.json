@@ -4,7 +4,7 @@
   "description": "Demonstration of using WebAssembly",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -a localhost -p 4200"
+    "start": "http-server -a localhost -p 5200"
   },
   "repository": {
     "type": "git",
