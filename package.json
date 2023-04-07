@@ -1,0 +1,27 @@
+{
+  "name": "rust-wasm-sandbox",
+  "version": "1.0.0",
+  "description": "Demonstration of using WebAssembly",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 4200"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaspm/rust-wasm-sandbox.git"
+  },
+  "keywords": [
+    "rust",
+    "wasm",
+    "js"
+  ],
+  "author": "Michal Gasparik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaspm/rust-wasm-sandbox/issues"
+  },
+  "homepage": "https://github.com/gaspm/rust-wasm-sandbox#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
