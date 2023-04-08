@@ -8,8 +8,23 @@
 
 ### Installation
 https://doc.rust-lang.org/cargo/getting-started/installation.html
+\
+or
+\
+https://rustup.rs/
+\
+https://rustwasm.github.io/wasm-pack/installer/
 
 ---
+
+## Start from Repo
+`npm i`
+`npm start`
+`npm run build`
+
+---
+
+## Start from Scratch
 
 ### Init Cargo.toml file
 `cargo init --name rust_wasm_starter --lib`
@@ -49,11 +64,12 @@ pub fn add(a: usize, b: usize) -> usize {
 ### Install http-server
 `npm i http-server --save`
 
-### Edit package.json and add the start script
+### Edit package.json and add the start and build script
 ```json
 {
   "scripts": {
-    "start": "http-server -a localhost -p 5200"
+    "start": "http-server -a localhost -p 5200",
+    "build": "wasm-pack build --release --target web"
   }
 }
 ```

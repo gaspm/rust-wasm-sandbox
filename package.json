@@ -4,7 +4,8 @@
   "description": "Demonstration of using WebAssembly",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -a localhost -p 5200"
+    "start": "http-server -a localhost -p 5200",
+    "build": "wasm-pack build --release --target web"
   },
   "repository": {
     "type": "git",
